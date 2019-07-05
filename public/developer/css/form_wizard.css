@@ -1,0 +1,225 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*form styles*/
+#msform {
+    /* text-align: center; */
+    position: relative;
+    margin-top: 30px;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 100%;
+    /* margin: 0 10%; */
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+/* 
+#msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ee0979;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+} */
+
+/*buttons*/
+#msform .action-button {
+    width: 100px;
+    /* background: #ee0979; */
+    background: #2f9247;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+    /* box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979; */
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #2f9247;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #1b1e24;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+
+/*headings*/
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #4c4c4c;
+    margin-bottom: 10px;
+    letter-spacing: 1.1px;
+    font-weight: bold;
+
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: #2f9247;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 12px;
+    color: #ffffff;
+    background: #4c4c4c;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+    position: relative;
+    z-index: 1;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #4c4c4c;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    /* z-index: -1;  */
+    /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+    /* background: #ee0979; */
+    background: #2f9247;
+    color: white;
+}
+
+
+/* Not relevant to this form */
+.dme_link {
+    margin-top: 30px;
+    text-align: center;
+}
+.dme_link a {
+    background: #FFF;
+    font-weight: bold;
+    /* color: #ee0979; */
+    color: #2f9247;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 5px 25px;
+    font-size: 12px;
+}
+
+.dme_link a:hover, .dme_link a:focus {
+    background: #C5C5F1;
+    text-decoration: none;
+}
+
+.form_wizard .label_head{
+    text-align: left;
+}
+.form_wizard .header_main_div_sec .title h4{
+    color: #F44336;
+    font-weight: 500;
+}
+.form_wizard .header_main_div_sec .title{
+    margin-bottom: 30px;
+}
+.form_wizard .job_desc_box_list .title h5 span{
+    float: none !important;
+    color: #F44336;
+}
+.form_wizard .profileImgBox{
+    width: 160px;
+    height: 160px;
+}
+.form_wizard .form-control{
+    border: 1px solid #ccc !important;
+}
